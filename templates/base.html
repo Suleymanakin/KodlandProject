@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    
+    <div class="score-board">
+        En Yüksek Puan: {{ highest_score }}
+    </div>
+    <div class="container">
+        <nav>
+            <a href="https://suleymanakin.pythonanywhere.com" target="_blank">Anasayfa</a>
+            <a href="https://www.github.com/Suleymanakin/KodlandProject" target="_blank">Github</a>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Geliştirici: <a href="https://www.suleymanakin.com" target="_blank">[Süleyman Akın]</a></p>
+    </footer>
+</body>
+
+</html>
